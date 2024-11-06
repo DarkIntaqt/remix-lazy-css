@@ -11,6 +11,7 @@ import {
 
 import "./tailwind.css";
 import Test from "components/Test";
+import { Suspense } from "react";
 
 export function ErrorBoundary() {
   const error = useRouteError();
@@ -52,7 +53,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Test />
+        <Suspense fallback={<p>Loading lazy red square</p>}>
+          <Test />
+        </Suspense>
         {children}
         <ScrollRestoration />
         <Scripts />
