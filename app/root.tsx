@@ -10,7 +10,6 @@ import {
 } from "@remix-run/react";
 
 import "./tailwind.css";
-import Test from "components/Test";
 
 export function ErrorBoundary() {
   const error = useRouteError();
@@ -52,7 +51,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Test />
         {children}
         <ScrollRestoration />
         <Scripts />

@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
+import Test from "components/Test";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,6 +12,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <>
+      <Test />
       <Link to="404" className="bg-slate-500">
         go to a 404
       </Link>
